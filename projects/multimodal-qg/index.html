@@ -48,38 +48,43 @@
   </section>
 
   <section class="case__block">
-  <h2 class="case__h">The platform</h2>
+    <h2 class="case__h">The platform</h2>
+    <div class="shots">
 
-  <div class="gallery">
-    <button class="gallery__btn gallery__btn--prev" aria-label="Previous">&#8592;</button>
-    <button class="gallery__btn gallery__btn--next" aria-label="Next">&#8594;</button>
-
-    <div class="gallery__track">
-      <figure class="gallery__slide">
+      <figure class="shot">
         <a href="/assets/qg-01.png" target="_blank" rel="noopener">
-          <img src="/assets/qg-01.png" alt="Generator landing page" />
+          <img src="/assets/qg-01.png" alt="Generator landing page showing two generation modes and marking scheme options" />
         </a>
-        <figcaption class="shot__cap">Figure 1 — Two generation modes aligned to HKEAA standards.</figcaption>
+        <figcaption class="shot__cap">Figure 1. Two generation modes, aligned to HKEAA standards, with marking schemes included.</figcaption>
       </figure>
 
-      <figure class="gallery__slide">
+      <figure class="shot">
         <a href="/assets/qg-02.png" target="_blank" rel="noopener">
-          <img src="/assets/qg-02.png" alt="Generated exam item" />
+          <img src="/assets/qg-02.png" alt="Generated exam item with a scientific diagram and cognitive and linguistic demand tags" />
         </a>
-        <figcaption class="shot__cap">Figure 2 — Each question tagged by cognitive &amp; linguistic demand.</figcaption>
+        <figcaption class="shot__cap">Figure 2. Generated item. Each question is tagged by cognitive and linguistic demand against the CLIL framework; scientific visuals are generated alongside the text.</figcaption>
       </figure>
 
-      <figure class="gallery__slide">
+      <figure class="shot">
         <a href="/assets/qg-03.png" target="_blank" rel="noopener">
-          <img src="/assets/qg-03.png" alt="Marking scheme" />
+          <img src="/assets/qg-03.png" alt="Marking scheme with key concepts, accepted alternatives, with generated multimodal element" />
         </a>
-        <figcaption class="shot__cap">Figure 3 — Marking scheme with key concepts &amp; accepted alternatives.</figcaption>
+        <figcaption class="shot__cap">Figure 3. Marking scheme with key concepts and accepted alternative answers. Export as Word, PDF, or structured JSON.</figcaption>
       </figure>
-    </div>
 
-    <div class="gallery__counter"></div>
-  </div>
-</section>
+    </div>
+  </section>
+
+  <section class="case__block">
+    <h2 class="case__h">Stack</h2>
+    <ul class="stack">
+      <li>Next.js</li>
+      <li>React</li>
+      <li>Node.js</li>
+      <li>Railway</li>
+      <li>LLM APIs</li>
+    </ul>
+  </section>
 
 </main>
 
@@ -98,18 +103,6 @@
   </span>
   <span class="colophon__note">Hand-built with HTML &amp; CSS &middot; last updated September 2026</span>
 </footer>
-<script>
-document.querySelectorAll('.gallery').forEach(g=>{
-  const s=g.querySelectorAll('.gallery__slide'),
-        p=g.querySelector('.gallery__btn--prev'),
-        n=g.querySelector('.gallery__btn--next'),
-        c=g.querySelector('.gallery__counter');
-  let i=0;
-  function show(x){s[i].classList.remove('is-active');i=(x+s.length)%s.length;s[i].classList.add('is-active');if(c)c.textContent=(i+1)+' / '+s.length}
-  show(0);
-  p.addEventListener('click',()=>show(i-1));
-  n.addEventListener('click',()=>show(i+1));
-});
-</script>
+
 </body>
 </html>
