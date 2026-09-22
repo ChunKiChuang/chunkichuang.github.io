@@ -440,3 +440,23 @@ section{max-width:var(--col);margin:0 auto;padding:40px}
   .index__item{flex-wrap:wrap;gap:6px 16px}
   .index__meta{margin-left:0;flex-basis:100%;white-space:normal}
 }
+
+/* ---------- screenshot gallery ---------- */
+.shots{margin:0;display:flex;flex-direction:column;gap:40px}
+.shot{margin:0}
+.shot a{display:block;line-height:0}
+.shot img{
+  width:100%;display:block;
+  border:1px solid var(--rule);
+  border-radius:2px;
+  background:#fff;
+}
+.shot__cap{
+  margin:10px 0 0;
+  font-family:"JetBrains Mono",monospace;
+  font-size:.66rem;
+  line-height:1.6;
+  letter-spacing:.02em;
+  color:var(--muted);
+  max-width:62ch;
+}
