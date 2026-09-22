@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multilingual Real-Time Assessment Platform — Chun Ki Chuang</title>
+<meta name="description" content="Case study: real-time multilingual speech assessment platform with ASR, LLM scoring, and TTS feedback." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<header class="masthead">
+  <a class="masthead__name" href="/">Chun Ki Chuang</a>
+  <nav class="masthead__nav">
+    <a href="/#about">About</a>
+    <a href="/projects/">Projects</a>
+    <a href="/publications/">Publications</a>
+    <a href="/cv.pdf">CV</a>
+    <a href="mailto:kimcck@connect.hku.hk">Contact</a>
+  </nav>
+</header>
+
+<main class="case">
+
+  <p class="case__eyebrow">System &middot; 01</p>
+  <h1 class="case__title">Multilingual Real-Time Assessment Platform</h1>
+  <div class="case__byline">
+    <span>Research Engineer</span>
+    <span>KindKernel Ltd.</span>
+    <span>Jun 2025 – Mar 2026</span>
+    <span>Proprietary</span>
+  </div>
+
+  <section class="case__block">
+    <h2 class="case__h">The engineering problem</h2>
+    <p>The platform assessed spoken and written language proficiency across three languages in real time, with concurrent learners at scale. The constraint was latency: speech recognition and synthesis had to respond within conversational thresholds on shared GPU infrastructure, while an LLM scoring pipeline graded open-ended spoken responses without contamination from adjacent learner inputs.</p>
+  </section>
+
+  <section class="case__block">
+    <h2 class="case__h">Pipeline</h2>
+    <div class="pipeline">
+      <div class="pipeline__step"><b>Speech input</b><small>learner audio</small></div>
+      <div class="pipeline__step"><b>ASR</b><small>transcription</small></div>
+      <div class="pipeline__step"><b>LLM scoring</b><small>open-ended responses</small></div>
+      <div class="pipeline__step"><b>TTS feedback</b><small>spoken output</small></div>
+    </div>
+    <p class="pipeline__cap">Simplified pipeline. Language routing and multi-stage evaluation omitted.</p>
+  </section>
+
+  <section class="case__block">
+    <h2 class="case__h">What I did</h2>
+    <ul>
+      <li>Engineered backend systems and optimised GPU-based inference pipelines for real-time speech processing across three languages.</li>
+      <li>Built the LLM-based automated scoring module for open-ended spoken responses.</li>
+      <li>Implemented speech-to-text conversion pipelines for multi-stage spoken-language evaluation.</li>
+      <li>Designed assessment frameworks grounded in educational research.</li>
+      <li>The peer-context contamination problem I encountered here became my AAAI-27 paper.</li>
+    </ul>
+    <p class="note"><strong>Deliberate simplicity.</strong> The curriculum mapping was straightforward; the difficulty sat in serving real-time multilingual speech at scale on shared GPUs.</p>
+  </section>
+
+  <section class="case__block">
+    <h2 class="case__h">Assessment design</h2>
+    <ul>
+      <li>Assessment rubrics aligned to institutional language proficiency standards.</li>
+      <li>Feedback delivered in the learner's target language.</li>
+      <li>Multi-stage evaluation &mdash; staged proficiency assessment rather than correct/incorrect.</li>
+      <li>Grading pipeline designed to isolate individual responses from peer context, which surfaced the contamination problem in my AAAI-27 paper.</li>
+    </ul>
+  </section>
+
+  <section class="case__block">
+    <h2 class="case__h">Evidence</h2>
+    <ul>
+      <li>End-to-end platform across three languages (Cantonese, Mandarin, English).</li>
+      <li>Real-time speech processing with GPU-optimised inference.</li>
+      <li>Automated scoring of open-ended spoken responses using LLMs.</li>
+      <li>Multi-stage spoken-language evaluation pipeline.</li>
+    </ul>
+  </section>
+
+  <section class="case__block">
+    <h2 class="case__h">System diagram</h2>
+    <div class="figure">
+      Drop your Excalidraw export here &mdash; replace this block with
+      <code>&lt;img src="/assets/kindkernel-arch.svg" alt="System architecture"&gt;</code>
+    </div>
+  </section>
+
+  <section class="case__block">
+    <h2 class="case__h">Stack</h2>
+    <ul class="stack">
+      <li>Python</li>
+      <li>GPU inference</li>
+      <li>ASR</li>
+      <li>TTS</li>
+      <li>LLM APIs</li>
+      <li>Real-time systems</li>
+    </ul>
+  </section>
+
+</main>
+
+<nav class="pagenav">
+  <a class="prev" href="/projects/">&#9665; Back<b>All projects</b></a>
+  <a class="next" href="/projects/multimodal-qg/">Next &#9655;<b>Multimodal Question Generation</b></a>
+</nav>
+
+<footer class="colophon">
+  <span>&copy; 2026 Chun Ki Chuang</span>
+  <span class="colophon__links">
+    <a href="/cv.pdf">CV</a> &middot;
+    <a href="https://orcid.org/0009-0008-6621-2926">ORCID</a> &middot;
+    <a href="https://github.com/chunkichuang">GitHub</a> &middot;
+    <a href="mailto:kimcck@connect.hku.hk">Email</a>
+  </span>
+  <span class="colophon__note">Hand-built with HTML &amp; CSS &middot; last updated October 2026</span>
+</footer>
+
+</body>
+</html>
