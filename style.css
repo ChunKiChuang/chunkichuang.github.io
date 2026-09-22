@@ -441,22 +441,55 @@ section{max-width:var(--col);margin:0 auto;padding:40px}
   .index__meta{margin-left:0;flex-basis:100%;white-space:normal}
 }
 
-/* ---------- screenshot gallery ---------- */
-.shots{margin:0;display:flex;flex-direction:column;gap:40px}
-.shot{margin:0}
+/* ---------- screenshot gallery (horizontal scroll-snap) ---------- */
+.shots{
+  display:flex;
+  gap:20px;
+  margin:0;
+  padding:0 0 20px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:var(--rule) transparent;
+}
+.shots::-webkit-scrollbar{height:6px}
+.shots::-webkit-scrollbar-track{background:transparent}
+.shots::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}
+
+.shot{
+  flex:0 0 72%;
+  min-width:0;
+  margin:0;
+  scroll-snap-align:center;
+}
+
 .shot a{display:block;line-height:0}
+
 .shot img{
-  width:100%;display:block;
+  width:100%;
+  aspect-ratio:16 / 10;
+  object-fit:contain;
+  object-position:top center;
+  background:#fff;
   border:1px solid var(--rule);
   border-radius:2px;
-  background:#fff;
 }
+
 .shot__cap{
   margin:10px 0 0;
   font-family:"JetBrains Mono",monospace;
   font-size:.66rem;
   line-height:1.6;
-  letter-spacing:.02em;
   color:var(--muted);
   max-width:62ch;
+}
+
+/* first slide flush left, last flush right */
+.shot:first-child{margin-left:0}
+
+@media(max-width:720px){
+  .shot{flex:0 0 86%}
+  .shots{gap:14px}
+  .shot img{aspect-ratio:4 / 3}
 }
