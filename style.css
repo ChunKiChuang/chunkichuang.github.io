@@ -66,8 +66,8 @@ strong{font-weight:500}
   gap:12px;
   flex-wrap:wrap;
   font-family:"JetBrains Mono",monospace;
-  font-size:.72rem;
-  letter-spacing:.04em;
+  font-size:.7rem;
+  letter-spacing:.02em;
   color:var(--muted);
   border-bottom:1px solid var(--rule);
 }
