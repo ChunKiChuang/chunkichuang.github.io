@@ -167,6 +167,10 @@ section{max-width:var(--col);margin:0 auto;padding:40px}
   color:var(--muted);
   min-width:2.5em;
 }
+.index__main{
+  flex:1;
+  min-width:0;
+}
 .index__title{
   font-family:"Instrument Serif",serif;
   font-size:1.5rem;
@@ -174,6 +178,17 @@ section{max-width:var(--col);margin:0 auto;padding:40px}
   transition:color .18s;
 }
 .index__item:hover .index__title{color:var(--accent)}
+.index__sub{
+  margin:5px 0 0;
+  max-width:66ch;
+  font-size:.88rem;
+  line-height:1.45;
+  color:var(--muted);
+}
+.index__sub strong{
+  color:var(--ink);
+  font-weight:500;
+}
 .index__meta{
   margin-left:auto;
   font-family:"JetBrains Mono",monospace;
@@ -415,6 +430,7 @@ section{max-width:var(--col);margin:0 auto;padding:40px}
   color:var(--muted);
   border-top:1px solid var(--rule);
 }
+.colophon p{margin:0}
 .colophon a:hover{color:var(--accent)}
 .colophon__note{flex-basis:100%;opacity:.7}
 
